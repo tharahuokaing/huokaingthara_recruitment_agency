@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huokaing Thara Recruitment | Connecting Talent with Opportunity</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter & Hanuman (Khmer font) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Kantumruuy+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0A192F',
+                            900: '#030E1E',
+                            700: '#112240',
+                        },
+                        teal: {
+                            500: '#0D9488',
+                            600: '#0D7A70',
+                            700: '#0F5148',
+                        },
+                        amber: {
+                            400: '#F59E0B',
+                            500: '#D97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Kantumruuy Pro', 'sans-serif'],
+                        khmer: ['Kantumruuy Pro', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar and glassmorphism styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0D9488;
+            border-radius: 4px;
+        }
+        .glass-header {
+            background: rgba(10, 25, 47, 0.92);
+            backdrop-filter: blur(10px);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+        }
+        .brand-gradient {
+            background: linear-gradient(135deg, #0A192F 0%, #0D9488 100%);
+        }
+    </style>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 glass-header text-white transition-all duration-300 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                    <div class="w-11 h-11 gold-gradient rounded-xl flex items-center justify-center shadow-lg font-bold text-navy-900 text-2xl tracking-wider border border-amber-300/30">
+                        HT
+                    </div>
+                    <div>
+                        <span class="text-xl sm:text-2xl font-bold tracking-tight text-white block leading-tight">
+                            HUOKAING THARA
+                        </span>
+                        <span class="text-xs text-teal-400 font-medium tracking-widest uppercase block" data-en="RECRUITMENT AGENCY" data-km="ភ្នាក់ងារជ្រើសរើសពលករ">
+                            RECRUITMENT AGENCY
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#hero" class="hover:text-amber-400 transition-colors" data-en="Home" data-km="ទំព័រដើម">Home</a>
+                    <a href="#jobs" class="hover:text-amber-400 transition-colors" data-en="Find Jobs" data-km="ស្វែងរកការងារ">Find Jobs</a>
+                    <a href="#about" class="hover:text-amber-400 transition-colors" data-en="About Us" data-km="អំពីយើង">About Us</a>
+                    <a href="#services" class="hover:text-amber-400 transition-colors" data-en="Services" data-km="សេវាកម្ម">Services</a>
+                    <a href="#testimonials" class="hover:text-amber-400 transition-colors" data-en="Testimonials" data-km="ការវាយតម្លៃ">Testimonials</a>
+                    <a href="#contact" class="hover:text-amber-400 transition-colors" data-en="Contact" data-km="ទំនាក់ទំនង">Contact</a>
+                </nav>
+
+                <!-- Language Toggle & CTA Button -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <!-- Language Selector Button -->
+                    <button id="langToggleBtn" onclick="toggleLanguage()" class="flex items-center space-x-2 bg-navy-700 hover:bg-slate-800 text-amber-400 border border-amber-500/30 px-3 py-1.5 rounded-lg text-sm font-semibold transition shadow-sm">
+                        <i class="fa-solid fa-globe"></i>
+                        <span id="currentLangLabel">ភាសាខ្មែរ (KM)</span>
+                    </button>
+                    
+                    <a href="#jobs" class="bg-teal-500 hover:bg-teal-600 text-white px-5 py-2 rounded-xl text-sm font-semibold shadow-lg shadow-teal-500/20 transition duration-200" data-en="Apply Now" data-km="ដាក់ពាក្យឥឡូវ">
+                        Apply Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center space-x-2">
+                    <button id="mobileLangBtn" onclick="toggleLanguage()" class="bg-navy-700 text-amber-400 border border-amber-500/30 px-2.5 py-1 rounded-md text-xs font-semibold">
+                        KM
+                    </button>
+                    <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="text-slate-300 hover:text-white p-2">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-navy-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#hero" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-amber-400" data-en="Home" data-km="ទំព័រដើម">Home</a>
+            <a href="#jobs" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-amber-400" data-en="Find Jobs" data-km="ស្វែងរកការងារ">Find Jobs</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-amber-400" data-en="About Us" data-km="អំពីយើង">About Us</a>
+            <a href="#services" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-amber-400" data-en="Services" data-km="សេវាកម្ម">Services</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-amber-400" data-en="Contact" data-km="ទំនាក់ទំនង">Contact</a>
+            <a href="#jobs" onclick="toggleMobileMenu()" class="block w-full text-center bg-teal-500 text-white font-semibold py-2.5 rounded-lg" data-en="Explore Careers" data-km="ស្វែងរកឱកាសការងារ">Explore Careers</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section id="hero" class="relative brand-gradient text-white py-20 lg:py-28 overflow-hidden">
+            <!-- Background Decorative Orbs -->
+            <div class="absolute -right-20 -top-20 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -left-20 -bottom-20 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center space-x-2 bg-slate-800/80 border border-teal-500/30 px-3.5 py-1.5 rounded-full text-xs sm:text-sm text-teal-300 font-medium shadow-inner">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                            <span data-en="#1 Premier Recruitment Agency in Cambodia" data-km="ទីភ្នាក់ងារជ្រើសរើសពលករជួរមុខនៅកម្ពុជា">#1 Premier Recruitment Agency in Cambodia</span>
+                        </div>
+                        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                            <span data-en="Empowering Career Growth & Top Enterprise Talent" data-km="ពង្រឹងការលូតលាស់អាជីព និងស្វែងរកបុគ្គលិកឆ្នើម">Empowering Career Growth & Top Enterprise Talent</span>
+                        </h1>
+                        <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed" data-en="Huokaing Thara Recruitment bridges high-caliber local professionals with leading global and local organizations in Phnom Penh and across Cambodia." data-km="ក្រុមហ៊ុន ហួខាង ថារ៉ា រីគ្រូតម៉ិន ភ្ជាប់ទំនាក់ទំនងរវាងអ្នកជំនាញដែលមានសមត្ថភាពខ្ពស់ ជាមួយស្ថាប័នកំពូលៗក្នុង និងក្រៅប្រទេស នៅរាជធានីភ្នំពេញ និងទូទាំងប្រទេសកម្ពុជា។">
+                            Huokaing Thara Recruitment bridges high-caliber local professionals with leading global and local organizations in Phnom Penh and across Cambodia.
+                        </p>
+
+                        <!-- Call To Actions -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                            <a href="#jobs" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-400 text-navy-900 font-bold px-7 py-3.5 rounded-xl shadow-xl hover:shadow-amber-500/20 transition transform hover:-translate-y-0.5 text-center" data-en="Browse Openings" data-km="មើលការងារទំនេរ">
+                                Browse Openings
+                            </a>
+                            <a href="#contact" class="w-full sm:w-auto border border-slate-400 hover:border-white text-white font-medium px-7 py-3.5 rounded-xl transition text-center hover:bg-white/5" data-en="Hire Top Talent" data-km="ជ្រើសរើសបុគ្គលិក">
+                                Hire Top Talent
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Illustration Card -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="bg-navy-800/80 border border-slate-700/60 p-6 sm:p-8 rounded-3xl shadow-2xl backdrop-blur-md w-full max-w-md">
+                            <h3 class="text-xl font-bold text-white mb-2" data-en="Quick Career Match" data-km="ស្វែងរកការងាររហ័ស">Quick Career Match</h3>
+                            <p class="text-xs text-slate-400 mb-6" data-en="Find positions matching your skill profile today." data-km="ស្វែងរកមុខតំណែងដែលសមស្របនឹងជំនាញរបស់អ្នកនៅថ្ងៃនេះ។">Find positions matching your skill profile today.</p>
+
+                            <!-- Mini Search Box in Hero -->
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="text-xs font-semibold uppercase text-slate-300 block mb-1" data-en="Keywords" data-km="ពាក្យគន្លឹះ">Keywords</label>
+                                    <div class="relative">
+                                        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3 text-slate-400"></i>
+                                        <input type="text" id="heroSearchInput" placeholder="Title, skills, or industry..." class="w-full bg-navy-900 border border-slate-700 rounded-xl py-2.5 pl-10 pr-4 text-sm text-white focus:outline-none focus:border-teal-400">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="text-xs font-semibold uppercase text-slate-300 block mb-1" data-en="Category" data-km="ជំពូក/ផ្នែក">Category</label>
+                                    <select id="heroCategorySelect" class="w-full bg-navy-900 border border-slate-700 rounded-xl py-2.5 px-3 text-sm text-white focus:outline-none focus:border-teal-400">
+                                        <option value="ALL" data-en="All Categories" data-km="គ្រប់ផ្នែកទាំងអស់">All Categories</option>
+                                        <option value="IT">Information Technology</option>
+                                        <option value="Management">Management & HR</option>
+                                        <option value="Banking">Banking & Finance</option>
+                                        <option value="Engineering">Engineering & Construction</option>
+                                        <option value="Hospitality">Hospitality & Tourism</option>
+                                    </select>
+                                </div>
+                                <button onclick="triggerHeroSearch()" class="w-full bg-teal-500 hover:bg-teal-600 text-white font-semibold py-3 rounded-xl transition shadow-lg shadow-teal-500/30 flex items-center justify-center space-x-2">
+                                    <i class="fa-solid fa-search"></i>
+                                    <span data-en="Search Jobs" data-km="ស្វែងរកឥឡូវនេះ">Search Jobs</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Stats Section -->
+        <section class="bg-white border-b border-slate-200 py-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                    <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                        <div class="text-3xl sm:text-4xl font-extrabold text-navy-800">1,200+</div>
+                        <div class="text-xs sm:text-sm text-slate-500 mt-1" data-en="Placed Professionals" data-km="បុគ្គលិកត្រូវផ្តល់ការងារ">Placed Professionals</div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                        <div class="text-3xl sm:text-4xl font-extrabold text-teal-600">250+</div>
+                        <div class="text-xs sm:text-sm text-slate-500 mt-1" data-en="Partner Companies" data-km="ក្រុមហ៊ុនដៃគូ">Partner Companies</div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                        <div class="text-3xl sm:text-4xl font-extrabold text-amber-500">98%</div>
+                        <div class="text-xs sm:text-sm text-slate-500 mt-1" data-en="Client Satisfaction" data-km="ការពេញចិត្តពីអតិថិជន">Client Satisfaction</div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                        <div class="text-3xl sm:text-4xl font-extrabold text-navy-800">10+</div>
+                        <div class="text-xs sm:text-sm text-slate-500 mt-1" data-en="Years Experience" data-km="បទពិសោធន៍ឆ្នាំ">Years Experience</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Job Openings Section -->
+        <section id="jobs" class="py-16 sm:py-24 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-2xl sm:text-4xl font-bold text-navy-800 tracking-tight" data-en="Explore Latest Career Opportunities" data-km="ស្វែងរកឱកាសការងារថ្មីៗ">
+                        Explore Latest Career Opportunities
+                    </h2>
+                    <p class="text-slate-600 mt-3 text-sm sm:text-base" data-en="Handpicked job opportunities from reputable companies in Phnom Penh and regional provinces." data-km="ឱកាសការងារដែលបានជ្រើសរើសយ៉ាងយកចិត្តទុកដាក់ពីក្រុមហ៊ុនល្បីៗនៅរាជធានីភ្នំពេញ និងតាមបណ្តាខេត្ត។">
+                        Handpicked job opportunities from reputable companies in Phnom Penh and regional provinces.
+                    </p>
+                </div>
+
+                <!-- Job Filter Bar -->
+                <div class="bg-white p-4 sm:p-6 rounded-2xl shadow-sm border border-slate-200 mb-8 space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
+                        <!-- Search Box -->
+                        <div class="md:col-span-5 relative">
+                            <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-400"></i>
+                            <input type="text" id="jobSearchKeyword" onkeyup="filterJobs()" placeholder="Search position, title, location..." class="w-full bg-slate-50 border border-slate-200 rounded-xl py-2.5 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500">
+                        </div>
+
+                        <!-- Category Filter Buttons -->
+                        <div class="md:col-span-7 flex flex-wrap gap-2 items-center justify-start md:justify-end" id="categoryButtons">
+                            <button onclick="setCategoryFilter('ALL')" class="category-btn active border px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition bg-teal-600 text-white border-teal-600" data-category="ALL" data-en="All Categories" data-km="ទាំងអស់">
+                                All
+                            </button>
+                            <button onclick="setCategoryFilter('IT')" class="category-btn border border-slate-200 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition bg-white text-slate-700 hover:bg-slate-100" data-category="IT">
+                                IT & Tech
+                            </button>
+                            <button onclick="setCategoryFilter('Management')" class="category-btn border border-slate-200 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition bg-white text-slate-700 hover:bg-slate-100" data-category="Management">
+                                Management
+                            </button>
+                            <button onclick="setCategoryFilter('Banking')" class="category-btn border border-slate-200 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition bg-white text-slate-700 hover:bg-slate-100" data-category="Banking">
+                                Banking
+                            </button>
+                            <button onclick="setCategoryFilter('Engineering')" class="category-btn border border-slate-200 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition bg-white text-slate-700 hover:bg-slate-100" data-category="Engineering">
+                                Engineering
+                            </button>
+                            <button onclick="setCategoryFilter('Hospitality')" class="category-btn border border-slate-200 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition bg-white text-slate-700 hover:bg-slate-100" data-category="Hospitality">
+                                Hospitality
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job List Container -->
+                <div id="jobListingsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Dynamic Job Cards populated by JavaScript -->
+                </div>
+
+                <!-- Empty State Message -->
+                <div id="noJobsFound" class="hidden text-center py-12 bg-white rounded-2xl border border-slate-200 mt-4">
+                    <i class="fa-solid fa-folder-open text-4xl text-slate-300 mb-3"></i>
+                    <h3 class="text-lg font-semibold text-slate-700" data-en="No Matching Job Positions Found" data-km="មិនមានការងារដែលត្រូវគ្នានឹងការស្វែងរកឡើយ">No Matching Job Positions Found</h3>
+                    <p class="text-sm text-slate-500 mt-1" data-en="Try resetting your filters or search terms." data-km="សូមសាកល្បងសម្អាតពាក្យស្វែងរកឡើងវិញ។">Try resetting your filters or search terms.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-16 sm:py-24 bg-white border-y border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-6 space-y-6">
+                        <div class="inline-block bg-teal-100 text-teal-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider" data-en="About Huokaing Thara" data-km="អំពី ហួខាង ថារ៉ា">
+                            About Huokaing Thara
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-800 leading-tight">
+                            <span data-en="Deep Local Expertise with International Standards" data-km="ជំនាញក្នុងស្រុកយ៉ាងជ្រាលជ្រៅ ប្រកបដោយស្តង់ដារអន្តរជាតិ">Deep Local Expertise with International Standards</span>
+                        </h2>
+                        <p class="text-slate-600 leading-relaxed text-sm sm:text-base" data-en="Founded in Phnom Penh, Huokaing Thara Recruitment is a licensed, premier human resources consultancy dedicated to supporting Cambodia’s economic growth by connecting driven talent with industry leaders." data-km="ត្រូវបានបង្កើតឡើងនៅរាជធានីភ្នំពេញ ក្រុមហ៊ុន ហួខាង ថារ៉ា រីគ្រូតម៉ិន ជាក្រុមហ៊ុនពិគ្រោះយោបល់ធនធានមនុស្សដែលមានអាជ្ញាប័ណ្ណត្រឹមត្រូវ ប្តេជ្ញាគាំទ្រដល់ការលូតលាស់សេដ្ឋកិច្ចកម្ពុជា តាមរយៈការភ្ជាប់ទំនាក់ទំនងរវាងបុគ្គលិកដែលមានសមត្ថភាព និងក្រុមហ៊ុនឈានមុខ។">
+                            Founded in Phnom Penh, Huokaing Thara Recruitment is a licensed, premier human resources consultancy dedicated to supporting Cambodia’s economic growth by connecting driven talent with industry leaders.
+                        </p>
+                        
+                        <div class="space-y-4 pt-2">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center font-bold flex-shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-navy-800 text-sm sm:text-base" data-en="Tailored Executive Search" data-km="ការស្វែងរកថ្នាក់ដឹកនាំតាមតម្រូវការ">Tailored Executive Search</h4>
+                                    <p class="text-xs sm:text-sm text-slate-500" data-en="Custom headhunting services for senior managerial and specialized C-level technical roles." data-km="សេវាកម្មស្វែងរកថ្នាក់ដឹកនាំជាន់ខ្ពស់ និងអ្នកជំនាញបច្ចេកទេសជាក់លាក់។">Custom headhunting services for senior managerial and specialized C-level technical roles.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-3">
+                                <div class="w-8 h-8 rounded-lg bg-teal-100 text-teal-600 flex items-center justify-center font-bold flex-shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                me<div>
+                                    <h4 class="font-semibold text-navy-800 text-sm sm:text-base" data-en="Bilingual Assessment & Screening" data-km="ការវាយតម្លៃ និងសម្ភាសន៍ពីរភាសា">Bilingual Assessment & Screening</h4>
+                                    <p class="text-xs sm:text-sm text-slate-500" data-en="Thorough vetting process evaluating both technical competencies and language proficiency (Khmer & English)." data-km="ដំណើរការជ្រើសរើស និងវាយតម្លៃសមត្ថភាពបច្ចេកទេស និងភាសា (ខ្មែរ និងអង់គ្លេស) យ៉ាងម៉ត់ចត់។">Thorough vetting process evaluating both technical competencies and language proficiency (Khmer & English).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column Interactive Feature Display -->
+                    <div class="lg:col-span-6">
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl brand-gradient p-8 text-white space-y-6">
+                            <h3 class="text-2xl font-bold border-b border-slate-700/80 pb-4" data-en="Why Choose Our Agency?" data-km="ហេតុអ្វីជ្រើសរើសសេវាកម្មយើងខ្ញុំ?">Why Choose Our Agency?</h3>
+                            
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div class="bg-navy-900/60 p-4 rounded-xl border border-slate-700/50">
+                                    <i class="fa-solid fa-briefcase text-2xl text-amber-400 mb-2"></i>
+                                    <h5 class="font-bold text-sm" data-en="Rapid Placement" data-km="ការផ្គូផ្គងការងាររហ័ស">Rapid Placement</h5>
+                                    <p class="text-xs text-slate-300 mt-1" data-en="Average placement turnaround within 14 business days." data-km="ការផ្គូផ្គងការងារបានសម្រេចក្នុងរយ:ពេលមធ្យម ១៤ ថ្ងៃ។">Average placement turnaround within 14 business days.</p>
+                                </div>
+                                <div class="bg-navy-900/60 p-4 rounded-xl border border-slate-700/50">
+                                    <i class="fa-solid fa-shield-halved text-2xl text-teal-400 mb-2"></i>
+                                    <h5 class="font-bold text-sm" data-en="Guaranteed Quality" data-km="ការធានាគុណភាព">Guaranteed Quality</h5>
+                                    <p class="text-xs text-slate-300 mt-1" data-en="Replacement warranty provided for candidate onboarding." data-km="មានការធានាផ្លាស់ប្តូរបុគ្គលិកថ្មីជូនប្រសិនបើមិនសមស្រប។">Replacement warranty provided for candidate onboarding.</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-amber-500/10 border border-amber-500/30 p-4 rounded-xl flex items-center space-x-4">
+                                <div class="text-amber-400 text-3xl">
+                                    <i class="fa-solid fa-award"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-sm text-amber-300" data-en="MoLVT Licensed Recruitment Firm" data-km="ទទួលបានអាជ្ញាប័ណ្ណផ្លូវការពីក្រសួងការងារ">MoLVT Licensed Recruitment Firm</div>
+                                    <div class="text-xs text-slate-300" data-en="Operating fully compliant with Cambodian labor laws and regulations." data-km="ប្រតិបត្តិការស្របតាមច្បាប់ស្តីពីការងារនៃព្រះរាជាណាចក្រកម្ពុជា។">Operating fully compliant with Cambodian labor laws and regulations.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-16 sm:py-24 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-2xl sm:text-4xl font-bold text-navy-800" data-en="Our Talent & HR Services" data-km="សេវាកម្មជ្រើសរើសបុគ្គលិក និងធនធានមនុស្ស">Our Talent & HR Services</h2>
+                    <p class="text-slate-600 mt-2 text-sm sm:text-base" data-en="Comprehensive workforce solutions tailored for businesses of all scales." data-km="ដំណោះស្រាយកម្លាំងពលកម្មគ្រប់ជ្រុងជ្រោយសម្រាប់អាជីវកម្មគ្រប់ទំហំ។">Comprehensive workforce solutions tailored for businesses of all scales.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition duration-300">
+                        <div class="w-14 h-14 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6">
+                            <i class="fa-solid fa-user-check"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-800 mb-3" data-en="Permanent Recruitment" data-km="ការជ្រើសរើសបុគ្គលិកអចិន្ត្រៃយ៍">Permanent Recruitment</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed" data-en="End-to-end recruitment process finding long-term candidates who align with your corporate vision." data-km="ដំណើរការជ្រើសរើសពេញលេញ ដើម្បីស្វែងរកបេក្ខជនរយៈពេលវែងដែលសមស្របនឹងចក្ខុវិស័យក្រុមហ៊ុន។">
+                            End-to-end recruitment process finding long-term candidates who align with your corporate vision.
+                        </p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition duration-300">
+                        <div class="w-14 h-14 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6">
+                            <i class="fa-solid fa-crown"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-800 mb-3" data-en="Executive Search" data-km="ការស្វែងរកថ្នាក់ដឹកនាំកំពូល">Executive Search</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed" data-en="Discreet headhunting for C-suite positions, senior directors, and specialized department heads." data-km="សេវាកម្មស្វែងរកថ្នាក់ដឹកនាំកំពូល នាយកប្រតិបត្តិ និងប្រធាននាយកដ្ឋានប្រកបដោយការសម្ងាត់។">
+                            Discreet headhunting for C-suite positions, senior directors, and specialized department heads.
+                        </p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition duration-300">
+                        <div class="w-14 h-14 bg-navy-50 text-navy-800 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6">
+                            <i class="fa-solid fa-file-invoice"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-800 mb-3" data-en="HR & Payroll Outsourcing" data-km="សេវាគ្រប់គ្រងប្រាក់បៀវត្ស និង HR">HR & Payroll Outsourcing</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed" data-en="Streamline operations by delegating payroll processing, NSSF compliance, and employment contracts." data-km="សម្រួលប្រតិបត្តិការដោយប្រគល់ការងារបើកប្រាក់បៀវត្ស ការងារ ប.ប.ស និងកិច្ចសន្យាការងារមកយើងខ្ញុំ។">
+                            Streamline operations by delegating payroll processing, NSSF compliance, and employment contracts.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-16 sm:py-24 bg-white border-t border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-2xl sm:text-4xl font-bold text-navy-800" data-en="Trusted by Professionals & Employers" data-km="ទទួលបានការទុកចិត្តពីនិយោជក និងអ្នកស្វែងរកការងារ">Trusted by Professionals & Employers</h2>
+                    <p class="text-slate-600 mt-2 text-sm sm:text-base" data-en="Hear what our client partners and placed jobseekers say about our service." data-km="ស្តាប់ការយល់ឃើញពីដៃគូអាជីវកម្ម និងបេក្ខជនដែលទទួលបានការងារតាមរយៈយើងខ្ញុំ។">Hear what our client partners and placed jobseekers say about our service.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 relative">
+                        <div class="text-amber-400 text-lg mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 italic text-sm sm:text-base mb-6" data-en="“Huokaing Thara Recruitment helped us fill 3 senior IT Manager roles in Phnom Penh within three weeks. Their understanding of the local talent pool is unmatched.”" data-km="“ក្រុមហ៊ុន ហួខាង ថារ៉ា បានជួយយើងក្នុងការជ្រើសរើសប្រធានផ្នែកបច្ចេកវិទ្យាព័ត៌មានចំនួន ៣ រូបនៅភ្នំពេញក្នុងរយៈពេលត្រឹមតែ ៣ សប្តាហ៍។ ការយល់ដឹងរបស់ពួកគាត់អំពីទីផ្សារការងារពិតជាអស្ចារ្យ។”">
+                            “Huokaing Thara Recruitment helped us fill 3 senior IT Manager roles in Phnom Penh within three weeks. Their understanding of the local talent pool is unmatched.”
+                        </p>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-full bg-navy-800 text-white flex items-center justify-center font-bold text-sm">
+                                SK
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-navy-800 text-sm">Sokha Keo</h5>
+                                <p class="text-xs text-slate-500" data-en="HR Director, FinTech Enterprise" data-km="នាយកធនធានមនុស្ស ក្រុមហ៊ុន FinTech">HR Director, FinTech Enterprise</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 relative">
+                        <div class="text-amber-400 text-lg mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 italic text-sm sm:text-base mb-6" data-en="“As a job seeker, the recruitment team guided me throughout the interview prep. I secured my dream role in Banking thanks to their professional support!”" data-km="“ក្នុងនាមជាអ្នកស្វែងរកការងារ ក្រុមការងារជ្រើសរើសបុគ្គលិកបានណែនាំខ្ញុំយ៉ាងល្អសម្រាប់ការរៀបចំសម្ភាសន៍។ ខ្ញុំទទួលបានការងារក្នុងក្តីស្រមៃផ្នែកធនាគារ ដោយសារការគាំទ្ររបស់ពួកគាត់!”">
+                            “As a job seeker, the recruitment team guided me throughout the interview prep. I secured my dream role in Banking thanks to their professional support!”
+                        </p>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-full bg-teal-600 text-white flex items-center justify-center font-bold text-sm">
+                                CD
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-navy-800 text-sm">Chan Dara</h5>
+                                <p class="text-xs text-slate-500" data-en="Senior Financial Analyst" data-km="អ្នកវិភាគហិរញ្ញវត្ថុជាន់ខ្ពស់">Senior Financial Analyst</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 sm:py-24 bg-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-12 gap-12">
+                    
+                    <!-- Contact Info -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-teal-600 block mb-1" data-en="Get In Touch" data-km="ទាក់ទងមកយើង">Get In Touch</span>
+                            <h2 class="text-3xl font-extrabold text-navy-800" data-en="Contact Our Office" data-km="ទំនាក់ទំនងការិយាល័យយើងខ្ញុំ">Contact Our Office</h2>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed" data-en="Whether you are seeking new career milestones or aiming to hire top talent in Cambodia, our expert consultants are ready to assist you." data-km="មិនថាអ្នកកំពុងស្វែងរកឱកាសការងារថ្មី ឬចង់ជ្រើសរើសបុគ្គលិកឆ្នើមសម្រាប់ក្រុមហ៊ុនទេ ក្រុមការងារជំនាញរបស់យើងរង់ចាំជួយអ្នកជានិច្ច។">
+                            Whether you are seeking new career milestones or aiming to hire top talent in Cambodia, our expert consultants are ready to assist you.
+                        </p>
+
+                        <div class="space-y-4 pt-2">
+                            <!-- Location -->
+                            <div class="flex items-start space-x-4 bg-white p-4 rounded-xl border border-slate-200">
+                                <div class="w-10 h-10 rounded-lg bg-teal-100 text-teal-600 flex items-center justify-center font-bold flex-shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-navy-800 text-sm" data-en="Phnom Penh Head Office" data-km="ការិយាល័យកណ្តាលរាជធានីភ្នំពេញ">Phnom Penh Head Office</h4>
+                                    <p class="text-xs text-slate-500 mt-1" data-en="#128, Preah Monivong Blvd, Sangkat Boeung Keng Kang I, Khan Chamkarmon, Phnom Penh, Cambodia." data-km="ផ្ទះលេខ ១២៨ មហាវិថីព្រះមុនីវង្ស សង្កាត់បឹងកេងកងទី១ ខណ្ឌចំការមន រាជធានីភ្នំពេញ កម្ពុជា។">#128, Preah Monivong Blvd, Sangkat Boeung Keng Kang I, Khan Chamkarmon, Phnom Penh, Cambodia.</p>
+                                </div>
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="flex items-start space-x-4 bg-white p-4 rounded-xl border border-slate-200">
+                                <div class="w-10 h-10 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center font-bold flex-shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-navy-800 text-sm" data-en="Phone & Telegram" data-km="ទូរស័ព្ទ & Telegram">Phone & Telegram</h4>
+                                    <p class="text-xs text-slate-500 mt-1">+855 (0)23 999 888 / +855 (0)12 345 678</p>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="flex items-start space-x-4 bg-white p-4 rounded-xl border border-slate-200">
+                                <div class="w-10 h-10 rounded-lg bg-navy-100 text-navy-800 flex items-center justify-center font-bold flex-shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-navy-800 text-sm" data-en="Email Address" data-km="អ៊ីមែល">Email Address</h4>
+                                    <p class="text-xs text-slate-500 mt-1">careers@huokaingthara.com.kh</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="lg:col-span-7">
+                        <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-xl">
+                            <h3 class="text-xl font-bold text-navy-800 mb-6" data-en="Send Us a Message" data-km="ផ្ញើសារមកកាន់យើង">Send Us a Message</h3>
+                            
+                            <form id="contactForm" onsubmit="handleContactSubmit(event)" class="space-y-4">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-700 mb-1" data-en="Your Name *" data-km="ឈ្មោះរបស់អ្នក *">Your Name *</label>
+                                        <input type="text" required class="w-full bg-slate-50 border border-slate-200 rounded-xl py-2.5 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-700 mb-1" data-en="Email Address *" data-km="អ៊ីមែល *">Email Address *</label>
+                                        <input type="email" required class="w-full bg-slate-50 border border-slate-200 rounded-xl py-2.5 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500">
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-700 mb-1" data-en="Phone Number" data-km="លេខទូរស័ព្ទ">Phone Number</label>
+                                        <input type="tel" class="w-full bg-slate-50 border border-slate-200 rounded-xl py-2.5 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-700 mb-1" data-en="I am a..." data-km="ខ្ញុំជា...">I am a...</label>
+                                        <select class="w-full bg-slate-50 border border-slate-200 rounded-xl py-2.5 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500">
+                                            <option data-en="Job Seeker" data-km="អ្នកស្វែងរកការងារ">Job Seeker</option>
+                                            <option data-en="Employer / Hiring Manager" data-km="និយោជក / អ្នកគ្រប់គ្រងការជ្រើសរើស">Employer / Hiring Manager</option>
+                                            <option data-en="General Inquiry" data-km="ការសាកសួរទូទៅ">General Inquiry</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1" data-en="Message *" data-km="សារ *">Message *</label>
+                                    <textarea rows="4" required class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"></textarea>
+                                </div>
+
+                                <button type="submit" class="w-full bg-navy-800 hover:bg-navy-900 text-white font-semibold py-3 rounded-xl transition shadow-lg flex items-center justify-center space-x-2">
+                                    <i class="fa-regular fa-paper-plane"></i>
+                                    <span data-en="Send Message" data-km="ផ្ញើសារ">Send Message</span>
+                                </button>
+                            </form>
+                            <div id="contactSuccessMsg" class="hidden mt-4 p-3 bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs rounded-xl font-medium text-center">
+                                <i class="fa-solid fa-circle-check mr-1"></i>
+                                <span data-en="Thank you! Your message has been sent successfully. Our team will get back to you shortly." data-km="សូមអរគុណ! សាររបស់អ្នកត្រូវបានផ្ញើដោយជោគជ័យ។ ក្រុមការងារយើងខ្ញុំនឹងទាក់ទងទៅវិញក្នុងពេលឆាប់ៗ។">Thank you! Your message has been sent successfully. Our team will get back to you shortly.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-white border-t border-slate-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-slate-800">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-9 h-9 gold-gradient rounded-lg flex items-center justify-center font-bold text-navy-900 text-xl">
+                            HT
+                        </div>
+                        <span class="text-lg font-bold tracking-tight">HUOKAING THARA</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed" data-en="Your trusted Cambodian recruitment partner connecting top talent with corporate leaders across South East Asia." data-km="ដៃគូជ្រើសរើសពលករជឿទុកចិត្តបាននៅកម្ពុជា ដែលភ្ជាប់ទំនាក់ទំនងបុគ្គលិកឆ្នើម ជាមួយក្រុមហ៊ុនឈានមុខ។">
+                        Your trusted Cambodian recruitment partner connecting top talent with corporate leaders across South East Asia.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-sm mb-4 text-amber-400" data-en="Quick Links" data-km="តំណភ្ជាប់រហ័ស">Quick Links</h4>
+                    <ul class="space-y-2 text-xs text-slate-300">
+                        <li><a href="#hero" class="hover:text-white transition" data-en="Home" data-km="ទំព័រដើម">Home</a></li>
+                        <li><a href="#jobs" class="hover:text-white transition" data-en="Latest Jobs" data-km="ការងារថ្មីៗ">Latest Jobs</a></li>
+                        <li><a href="#about" class="hover:text-white transition" data-en="About Us" data-km="អំពីយើង">About Us</a></li>
+                        <li><a href="#services" class="hover:text-white transition" data-en="Services" data-km="សេវាកម្ម">Services</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-sm mb-4 text-amber-400" data-en="Sectors" data-km="វិស័យសំខាន់ៗ">Sectors</h4>
+                    <ul class="space-y-2 text-xs text-slate-300">
+                        <li>Information Technology</li>
+                        <li>Banking & Microfinance</li>
+                        <li>Executive Management</li>
+                        <li>Engineering & Civil Construction</li>
+                        <li>Hospitality & Service</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-sm mb-4 text-amber-400" data-en="Connect With Us" data-km="បណ្តាញសង្គម">Connect With Us</h4>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-teal-500 hover:text-white transition">
+                            <i class="fa-brands fa-facebook-f text-sm"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-teal-500 hover:text-white transition">
+                            <i class="fa-brands fa-telegram text-sm"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-teal-500 hover:text-white transition">
+                            <i class="fa-brands fa-linkedin-in text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 text-center text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p>&copy; 2026 Huokaing Thara Recruitment Co., Ltd. All Rights Reserved.</p>
+                <p class="text-slate-400">Phnom Penh, Kingdom of Cambodia</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Job Application Modal -->
+    <div id="applyModal" class="fixed inset-0 z-50 hidden bg-navy-900/80 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white w-full max-w-lg rounded-3xl shadow-2xl border border-slate-200 overflow-hidden relative my-8">
+            <!-- Modal Header -->
+            <div class="brand-gradient text-white p-6 relative">
+                <button onclick="closeApplyModal()" class="absolute right-5 top-5 text-slate-300 hover:text-white text-xl">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <span class="text-xs text-teal-300 font-semibold uppercase tracking-wider block mb-1" data-en="Application Form" data-km="ទម្រង់បែបបទដាក់ពាក្យ">Application Form</span>
+                <h3 id="modalJobTitle" class="text-xl font-bold">Job Title Here</h3>
+                <p id="modalJobCompany" class="text-xs text-slate-300 mt-1">Company Name</p>
+            </div>
+
+            <!-- Modal Form Body -->
+            <form id="jobApplicationForm" onsubmit="handleApplicationSubmit(event)" class="p-6 space-y-4">
+                <input type="hidden" id="modalJobId" value="">
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1" data-en="Full Name *" data-km="ឈ្មោះពេញ *">Full Name *</label>
+                    <input type="text" required placeholder="e.g. Sok Visal" class="w-full bg-slate-50 border border-slate-200 rounded-xl py-2.5 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500">
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1" data-en="Email Address *" data-km="អ៊ីមែល *">Email Address *</label>
+                        <input type="email" required placeholder="visal@example.com" class="w-full bg-slate-50 border border-slate-200 rounded-xl py-2.5 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1" data-en="Phone Number *" data-km="លេខទូរស័ព្ទ *">Phone Number *</label>
+                        <input type="tel" required placeholder="012 345 678" class="w-full bg-slate-50 border border-slate-200 rounded-xl py-2.5 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1" data-en="Expected Salary (USD)" data-km="ប្រាក់បៀវត្សរំពឹងទុក (ដុល្លារ)">Expected Salary (USD)</label>
+                    <input type="text" placeholder="e.g. $800 - $1,200" class="w-full bg-slate-50 border border-slate-200 rounded-xl py-2.5 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500">
+                </div>
+
+                <!-- Simulated Resume Upload -->
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1" data-en="Upload Resume/CV (PDF or Word) *" data-km="បង់ប្រវត្តិរូបសង្ខេប CV (PDF ឬ Word) *">Upload Resume/CV (PDF or Word) *</label>
+                    <div class="border-2 border-dashed border-slate-300 rounded-xl p-4 text-center bg-slate-50 hover:bg-slate-100 transition cursor-pointer relative" id="dropzone">
+                        <input type="file" id="resumeFileInput" required accept=".pdf,.doc,.docx" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" onchange="updateFileName(this)">
+                        <i class="fa-solid fa-cloud-arrow-up text-2xl text-teal-600 mb-1"></i>
+                        <p id="fileNameDisplay" class="text-xs text-slate-600 font-medium" data-en="Click or Drag CV file here" data-km="ចុច ឬ ទាញទម្លាក់ឯកសារ CV ទីនេះ">Click or Drag CV file here</p>
+                        <p class="text-[10px] text-slate-400">PDF, DOC, DOCX up to 5MB</p>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1" data-en="Cover Note / Motivation" data-km="កំណត់ចំណាំបន្ថែម">Cover Note / Motivation</label>
+                    <textarea rows="3" placeholder="Brief statement about your qualifications..." class="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"></textarea>
+                </div>
+
+                <div class="pt-2 flex justify-end space-x-3">
+                    <button type="button" onclick="closeApplyModal()" class="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 font-medium text-xs rounded-xl" data-en="Cancel" data-km="បោះបង់">Cancel</button>
+                    <button type="submit" class="px-6 py-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold text-xs rounded-xl shadow-lg shadow-teal-600/30" data-en="Submit Application" data-km="ដាក់ពាក្យ">Submit Application</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Application Success Toast Notification -->
+    <div id="toastNotification" class="fixed bottom-5 right-5 z-50 hidden bg-emerald-600 text-white px-5 py-3 rounded-2xl shadow-2xl flex items-center space-x-3">
+        <i class="fa-solid fa-circle-check text-xl"></i>
+        <div>
+            <div class="font-bold text-xs" data-en="Application Submitted!" data-km="បានដាក់ពាក្យរួចរាល់!">Application Submitted!</div>
+            <div class="text-[11px] text-emerald-100" data-en="We will review your CV and contact you shortly." data-km="យើងខ្ញុំនឹងពិនិត្យមើលប្រវត្តិរូបរបស់អ្នក ហើយទាក់ទងទៅវិញ។">We will review your CV and contact you shortly.</div>
+        </div>
+    </div>
+
+    <script>
+        /* -------------------------------------------------------------
+           1. Dynamic Job Database
+        ------------------------------------------------------------- */
+        const jobsDatabase = [
+            {
+                id: 'job-1',
+                titleEn: 'Senior Full Stack Developer (React / Node)',
+                titleKm: 'អ្នកអភិវឌ្ឍន៍កម្មវិធី Full Stack ជាន់ខ្ពស់',
+                category: 'IT',
+                company: 'TechPhnom Digital Co., Ltd.',
+                locationEn: 'Phnom Penh (BKK1)',
+                locationKm: 'ភ្នំពេញ (បឹងកេងកង១)',
+                typeEn: 'Full-time',
+                typeKm: 'ពេញម៉ោង',
+                salary: '$1,500 - $2,500',
+                dateEn: '2 days ago',
+                dateKm: '២ ថ្ងៃមុន',
+                descEn: 'Seeking an experienced full stack developer to lead modern web architecture for client enterprise projects.',
+                descKm: 'ស្វែងរកអ្នកអភិវឌ្ឍន៍កម្មវិធីដែលមានបទពិសោធន៍ ដើម្បីដឹកនាំការបង្កើតប្រព័ន្ធបច្ចេកវិទ្យាទំនើប។'
+            },
+            {
+                id: 'job-2',
+                titleEn: 'Branch Operations Manager',
+                titleKm: 'អ្នកគ្រប់គ្រងប្រតិបត្តិការសាខា',
+                category: 'Banking',
+                company: 'Cambodia Commercial Microfinance',
+                locationEn: 'Phnom Penh (Toul Kork)',
+                locationKm: 'ភ្នំពេញ (ទួលគោក)',
+                typeEn: 'Full-time',
+                typeKm: 'ពេញម៉ោង',
+                salary: '$1,200 - $1,800',
+                dateEn: '1 day ago',
+                dateKm: '១ ថ្ងៃមុន',
+                descEn: 'Responsible for daily financial operations, branch compliance, customer service excellence and team leadership.',
+                descKm: 'ទទួលខុសត្រូវលើប្រតិបត្តិការហិរញ្ញវត្ថុប្រចាំថ្ងៃ ការអនុវត្តតាមបទដ្ឋាន និងការដឹកនាំក្រុមការងារសាខា។'
+            },
+            {
+                id: 'job-3',
+                titleEn: 'Senior Human Resources Business Partner',
+                titleKm: 'អ្នកជំនាញការធនធានមនុស្សជាន់ខ្ពស់',
+                category: 'Management',
+                company: 'Global Holdings Cambodia',
+                locationEn: 'Phnom Penh',
+                locationKm: 'ភ្នំពេញ',
+                typeEn: 'Full-time',
+                typeKm: 'ពេញម៉ោង',
+                salary: '$1,400 - $2,000',
+                dateEn: '3 days ago',
+                dateKm: '៣ ថ្ងៃមុន',
+                descEn: 'Drive talent strategy, employee engagement, labor law compliance, and organizational development.',
+                descKm: 'រៀបចំយុទ្ធសាស្ត្រធនធានមនុស្ស ការផ្លាស់ប្តូរវប្បធម៌ស្ថាប័ន និងការអនុវត្តច្បាប់ការងារ។'
+            },
+            {
+                id: 'job-4',
+                titleEn: 'Site Civil Project Engineer',
+                titleKm: 'វិស្វករសំណង់ស៊ីវិលគម្រោង',
+                category: 'Engineering',
+                company: 'Angkor Construction Group',
+                locationEn: 'Siem Reap / Phnom Penh',
+                locationKm: 'សៀមរាប / ភ្នំពេញ',
+                typeEn: 'Full-time',
+                typeKm: 'ពេញម៉ោង',
+                salary: '$1,000 - $1,600',
+                dateEn: 'Just now',
+                dateKm: 'ទើបតែបន្ថែម',
+                descEn: 'Oversee structural engineering, safety standards, sub-contractors and quality assurance at construction sites.',
+                descKm: 'គ្រប់គ្រងការងារវិស្វកម្មរចនាសម្ព័ន្ធ បទដ្ឋានសុវត្ថិភាព និងការត្រួតពិនិត្យគុណភាពសំណង់។'
+            },
+            {
+                id: 'job-5',
+                titleEn: 'Hotel General Manager',
+                titleKm: 'អ្នកគ្រប់គ្រងទូទៅសណ្ឋាគារ',
+                category: 'Hospitality',
+                company: 'Luxury Bay Resort & Spa',
+                locationEn: 'Sihanoukville',
+                locationKm: 'ព្រះសីហនុ',
+                typeEn: 'Full-time',
+                typeKm: 'ពេញម៉ោង',
+                salary: '$2,500 - $3,500',
+                dateEn: '4 days ago',
+                dateKm: '៤ ថ្ងៃមុន',
+                descEn: 'Lead international luxury resort operations, guest satisfaction, budgeting and marketing strategy.',
+                descKm: 'ដឹកនាំប្រតិបត្តិការសណ្ឋាគាររមណីយដ្ឋានប្រកបដោយស្តង់ដារអន្តរជាតិ ការគ្រប់គ្រងថវិកា និងការផ្សព្វផ្សាយ។'
+            },
+            {
+                id: 'job-6',
+                titleEn: 'Cybersecurity Analyst',
+                titleKm: 'អ្នកវិភាគសន្តិសុខបច្ចេកវិទ្យា',
+                category: 'IT',
+                company: 'Khmer Cyber Shield',
+                locationEn: 'Phnom Penh',
+                locationKm: 'ភ្នំពេញ',
+                typeEn: 'Full-time',
+                typeKm: 'ពេញម៉ោង',
+                salary: '$1,300 - $2,100',
+                dateEn: '5 days ago',
+                dateKm: '៥ ថ្ងៃមុន',
+                descEn: 'Monitor enterprise security, perform threat risk assessment, and implement defense protocols.',
+                descKm: 'តាមដានសន្តិសុខបណ្តាញកុំព្យូទ័រ វាយតម្លៃហានិភ័យ និងអនុវត្តប្រព័ន្ធការពារទិន្នន័យ។'
+            }
+        ];
+
+        let currentLang = 'en'; // 'en' or 'km'
+        let activeCategory = 'ALL';
+
+        /* -------------------------------------------------------------
+           2. Render Job Cards
+        ------------------------------------------------------------- */
+        function renderJobs() {
+            const container = document.getElementById('jobListingsContainer');
+            const searchKeyword = document.getElementById('jobSearchKeyword').value.toLowerCase().trim();
+            const noJobsEl = document.getElementById('noJobsFound');
+
+            container.innerHTML = '';
+            let matchCount = 0;
+
+            jobsDatabase.forEach(job => {
+                const matchesCategory = (activeCategory === 'ALL' || job.category === activeCategory);
+                
+                const titleText = (currentLang === 'en' ? job.titleEn : job.titleKm).toLowerCase();
+                const locationText = (currentLang === 'en' ? job.locationEn : job.locationKm).toLowerCase();
+                const companyText = job.company.toLowerCase();
+
+                const matchesSearch = titleText.includes(searchKeyword) || 
+                                      locationText.includes(searchKeyword) || 
+                                      companyText.includes(searchKeyword);
+
+                if (matchesCategory && matchesSearch) {
+                    matchCount++;
+                    const card = document.createElement('div');
+                    card.className = "bg-white rounded-2xl border border-slate-200 p-6 flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1";
+                    
+                    const title = currentLang === 'en' ? job.titleEn : job.titleKm;
+                    const location = currentLang === 'en' ? job.locationEn : job.locationKm;
+                    const type = currentLang === 'en' ? job.typeEn : job.typeKm;
+                    const date = currentLang === 'en' ? job.dateEn : job.dateKm;
+                    const desc = currentLang === 'en' ? job.descEn : job.descKm;
+                    const applyBtnText = currentLang === 'en' ? 'Apply Position' : 'ដាក់ពាក្យសុំធ្វើការ';
+
+                    card.innerHTML = `
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-teal-50 text-teal-700 border border-teal-200">
+                                    ${job.category}
+                                </span>
+                                <span class="text-[11px] text-slate-400 font-medium">
+                                    <i class="fa-regular fa-clock mr-1"></i>${date}
+                                </span>
+                            </div>
+                            <h3 class="text-lg font-bold text-navy-800 leading-snug hover:text-teal-600 transition cursor-pointer" onclick="openApplyModal('${job.id}')">
+                                ${title}
+                            </h3>
+                            <p class="text-xs font-medium text-slate-500 mt-1">${job.company}</p>
+                            
+                            <p class="text-xs text-slate-600 mt-3 line-clamp-2 leading-relaxed">${desc}</p>
+                            
+                            <div class="mt-4 pt-4 border-t border-slate-100 space-y-1.5 text-xs text-slate-500">
+                                <div class="flex items-center">
+                                    <i class="fa-solid fa-location-dot w-4 text-slate-400"></i>
+                                    <span>${location}</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fa-solid fa-coins w-4 text-amber-500"></i>
+                                    <span class="font-semibold text-slate-700">${job.salary}</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6">
+                            <button onclick="openApplyModal('${job.id}')" class="w-full bg-navy-800 hover:bg-teal-600 text-white font-semibold py-2.5 rounded-xl text-xs transition duration-200 shadow flex items-center justify-center space-x-2">
+                                <span>${applyBtnText}</span>
+                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </button>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                }
+            });
+
+            if (matchCount === 0) {
+                noJobsEl.classList.remove('hidden');
+            } else {
+                noJobsEl.classList.add('hidden');
+            }
+        }
+
+        /* -------------------------------------------------------------
+           3. Category Filter Logic
+        ------------------------------------------------------------- */
+        function setCategoryFilter(category) {
+            activeCategory = category;
+            const buttons = document.querySelectorAll('.category-btn');
+            
+            buttons.forEach(btn => {
+                if (btn.getAttribute('data-category') === category) {
+                    btn.classList.add('bg-teal-600', 'text-white', 'border-teal-600');
+                    btn.classList.remove('bg-white', 'text-slate-700');
+                } else {
+                    btn.classList.remove('bg-teal-600', 'text-white', 'border-teal-600');
+                    btn.classList.add('bg-white', 'text-slate-700');
+                }
+            });
+
+            renderJobs();
+        }
+
+        function filterJobs() {
+            renderJobs();
+        }
+
+        function triggerHeroSearch() {
+            const heroKw = document.getElementById('heroSearchInput').value;
+            const heroCat = document.getElementById('heroCategorySelect').value;
+
+            document.getElementById('jobSearchKeyword').value = heroKw;
+            setCategoryFilter(heroCat);
+
+            const jobsSection = document.getElementById('jobs');
+            jobsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        /* -------------------------------------------------------------
+           4. Language Switching System (EN <-> KM)
+        ------------------------------------------------------------- */
+        function toggleLanguage() {
+            currentLang = (currentLang === 'en') ? 'km' : 'en';
+            
+            // Update Toggle Button Display
+            const langLabel = document.getElementById('currentLangLabel');
+            const mobileLangBtn = document.getElementById('mobileLangBtn');
+            
+            if (currentLang === 'km') {
+                langLabel.textContent = 'English (EN)';
+                mobileLangBtn.textContent = 'EN';
+                document.documentElement.lang = 'km';
+            } else {
+                langLabel.textContent = 'ភាសាខ្មែរ (KM)';
+                mobileLangBtn.textContent = 'KM';
+                document.documentElement.lang = 'en';
+            }
+
+            // Update all elements with data-en and data-km
+            const translatableElements = document.querySelectorAll('[data-en][data-km]');
+            translatableElements.forEach(el => {
+                if (currentLang === 'km') {
+                    el.textContent = el.getAttribute('data-km');
+                } else {
+                    el.textContent = el.getAttribute('data-en');
+                }
+            });
+
+            // Re-render Job Cards for updated language translations
+            renderJobs();
+        }
+
+        /* -------------------------------------------------------------
+           5. Mobile Navigation Menu Toggle
+        ------------------------------------------------------------- */
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        /* -------------------------------------------------------------
+           6. Job Application Modal Operations
+        ------------------------------------------------------------- */
+        function openApplyModal(jobId) {
+            const job = jobsDatabase.find(j => j.id === jobId);
+            if (!job) return;
+
+            document.getElementById('modalJobId').value = job.id;
+            document.getElementById('modalJobTitle').textContent = currentLang === 'en' ? job.titleEn : job.titleKm;
+            document.getElementById('modalJobCompany').textContent = job.company + ' • ' + (currentLang === 'en' ? job.locationEn : job.locationKm);
+
+            const modal = document.getElementById('applyModal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeApplyModal() {
+            const modal = document.getElementById('applyModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+            document.getElementById('jobApplicationForm').reset();
+            document.getElementById('fileNameDisplay').textContent = currentLang === 'en' ? 'Click or Drag CV file here' : 'ចុច ឬ ទាញទម្លាក់ឯកសារ CV ទីនេះ';
+        }
+
+        function updateFileName(input) {
+            const nameDisplay = document.getElementById('fileNameDisplay');
+            if (input.files && input.files[0]) {
+                nameDisplay.textContent = 'Attached: ' + input.files[0].name;
+            }
+        }
+
+        function handleApplicationSubmit(event) {
+            event.preventDefault();
+            closeApplyModal();
+
+            // Display Toast
+            const toast = document.getElementById('toastNotification');
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 4000);
+        }
+
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            const msg = document.getElementById('contactSuccessMsg');
+            msg.classList.remove('hidden');
+            document.getElementById('contactForm').reset();
+            setTimeout(() => {
+                msg.classList.add('hidden');
+            }, 5000);
+        }
+
+        /* Initialize Page on Load */
+        window.onload = function() {
+            renderJobs();
+        };
+    </script>
+</body>
+</html>
