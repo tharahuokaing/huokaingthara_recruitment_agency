@@ -201,6 +201,9 @@
                                         <option value="CS">Customer Service</option>
                                         <option value="Model">Model</option>
                                         <option value="Teacher">Teacher</option>
+                                        <option value="Actress & Actor">Actress & Actor</option>
+                                        <option value="Sale In">Sale In</option>
+
                                     </select>
                                 </div>
                                 <button onclick="triggerHeroSearch()" class="w-full bg-teal-500 hover:bg-teal-600 text-white font-semibold py-3 rounded-xl transition shadow-lg shadow-teal-500/30 flex items-center justify-center space-x-2">
@@ -287,6 +290,12 @@
                             </button>
                             <button onclick="setCategoryFilter('Teacher')" class="category-btn border border-slate-200 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition bg-white text-slate-700 hover:bg-slate-100" data-category="Teacher">
                                 Teacher
+                            </button>
+                            <button onclick="setCategoryFilter('Actor & Actress')" class="category-btn border border-slate-200 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition bg-white text-slate-700 hover:bg-slate-100" data-category="Actor & Actress">
+                                Actor & Actress
+                            </button>
+                            <button onclick="setCategoryFilter('Sale in')" class="category-btn border border-slate-200 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition bg-white text-slate-700 hover:bg-slate-100" data-category="Sale In">
+                                Sale In
                             </button>
                         </div>
                     </div>
@@ -612,7 +621,9 @@
                         <li>Hospitality & Service</li>
                         <li>Customer Service</li>
                         <li>Model</li>
-                        <li>Teacher</li>                        
+                        <li>Teacher</li>
+                        <li>Actress & Actor</li>
+                        <li>Sale In</li>
                     </ul>
                 </div>
 
@@ -828,7 +839,7 @@
                 descKm: 'សម្របសម្រួលនិងឆ្លើយតបសំណួរអតិថិជនតាមទូរស័ព្ទ/សារ ផ្ដល់ដំណោះស្រាយ និងផ្តល់សេវាកម្មប្រកបដោយភាពស្និទ្ធស្នាល។'
             },
             {
-                id: 'job-7',
+                id: 'job-8',
                 titleEn: 'Model / Actress (Female, Age 18–35)',
                 titleKm: 'តារាម៉ូឌែល / តារាសម្តែង (នារី, អាយុ ១៨–៣៥ ឆ្នាំ)',
                 category: 'Entertainment',
@@ -844,7 +855,7 @@
                 descKm: 'ស្វែងរកតារាម៉ូឌែល/សម្តែងនារី (អាយុ ១៨–៣៥ ឆ្នាំ, កម្ពស់ ១៧០cm ឡើង, ទម្ងន់ ~៥៥kg) សម្រាប់ថតពាណិជ្ជកម្ម គម្រោងមេឌៀ និងតំណាងប្រែន។'
             },
             {
-                id: 'job-8',
+                id: 'job-9',
                 titleEn: 'Khmer Language Teacher (Female, Age 18–35)',
                 titleKm: 'គ្រូបង្រៀនភាសាខ្មែរ (នារី, អាយុ ១៨–៣៥ ឆ្នាំ)',
                 category: 'Education',
@@ -858,6 +869,134 @@
                 dateKm: 'ទើបតែបញ្ចូល',
                 descEn: 'Teach Khmer literacy and language skills to primary/secondary students or adult learners, prepare lesson plans, and assess progress.',
                 descKm: 'បង្រៀនអក្សរសាស្ត្រ និងភាសាខ្មែរដល់សិស្ស ឬអ្នកសិក្សា រៀបចំកិច្ចតែងការបង្រៀន និងវាយតម្លៃលទ្ធផលសិក្សារបស់សិស្ស។'           
+            },
+            {
+                id: 'job-10',
+                titleEn: 'Female Performing Artist / Actress (5 Positions)',
+                titleKm: 'សិល្បការិនី (០៥ រូប)',
+                category: 'Entertainment',
+                company: 'Huokaing Thara Recruitment',
+                locationEn: 'Phnom Penh',
+                locationKm: 'ភ្នំពេញ',
+                typeEn: 'Full-time / Contract',
+                typeKm: 'ពេញម៉ោង / កិច្ចសន្យា',
+                salary: '$800 - $2,500',
+                dateEn: 'Just now',
+                dateKm: 'ទើបតែបញ្ចូល',
+                descEn: 'Seeking 5 female artists/performers (Height: 170cm+, Weight: ~55kg) for media projects, stage, and commercial shoots.',
+                descKm: 'ស្វែងរកសិល្បការិនី ០៥ រូប (កម្ពស់ ១៧០cm ឡើង, ទម្ងន់ ~៥៥kg) សម្រាប់គម្រោងមេឌៀ ការសម្តែង និងការថតពាណិជ្ជកម្ម។'
+            },
+            {
+                id: 'job-11',
+                titleEn: 'Male Performing Artist / Actor (5 Positions)',
+                titleKm: 'សិល្បករ (០៥ រូប)',
+                category: 'Entertainment',
+                company: 'Huokaing Thara Recruitment',
+                locationEn: 'Phnom Penh',
+                locationKm: 'ភ្នំពេញ',
+                typeEn: 'Full-time / Contract',
+                typeKm: 'ពេញម៉ោង / កិច្ចសន្យា',
+                salary: '$800 - $2,500',
+                dateEn: 'Just now',
+                dateKm: 'ទើបតែបញ្ចូល',
+                descEn: 'Seeking 5 male artists/performers (Height: 170cm+, Weight: ~65kg) for media projects, stage, and commercial shoots.',
+                descKm: 'ស្វែងរកសិល្បករ ០៥ រូប (កម្ពស់ ១៧០cm ឡើង, ទម្ងន់ ~៦៥kg) សម្រាប់គម្រោងមេឌៀ ការសម្តែង និងការថតពាណិជ្ជកម្ម។'
+            },
+            {
+                id: 'job-12',
+                titleEn: 'Retail Sales Associate - Michael Kors (2 Positions: 1 Male, 1 Female)',
+                titleKm: 'បុគ្គលិកផ្នែកលក់ - Michael Kors (០២ រូប: ប្រុស ០១, ស្រី ០១)',
+                category: 'Sales',
+                company: 'Michael Kors (Aeon Mall & City Mall)',
+                locationEn: 'Phnom Penh',
+                locationKm: 'ភ្នំពេញ',
+                typeEn: 'Full-time',
+                typeKm: 'ពេញម៉ោង',
+                salary: '$350 - $650',
+                dateEn: 'Just now',
+                dateKm: 'ទើបតែបញ្ចូល',
+                descEn: 'Sales associates for Michael Kors stores at Aeon Mall & City Mall. Working hours: 8:00 AM - 5:00 PM.',
+                descKm: 'បុគ្គលិកផ្នែកលក់ហាង Michael Kors នៅ Aeon Mall និង City Mall។ ម៉ោងធ្វើការ៖ ៨:០០ ព្រឹក ដល់ ៥:០០ ល្ងាច។'
+            },
+            {
+                id: 'job-13',
+                titleEn: 'Retail Sales Associate - Coach (2 Positions: 1 Male, 1 Female)',
+                titleKm: 'បុគ្គលិកផ្នែកលក់ - Coach (០២ រូប: ប្រុស ០១, ស្រី ០១)',
+                category: 'Sales',
+                company: 'Coach (Aeon Mall & City Mall)',
+                locationEn: 'Phnom Penh',
+                locationKm: 'ភ្នំពេញ',
+                typeEn: 'Full-time',
+                typeKm: 'ពេញម៉ោង',
+                salary: '$350 - $650',
+                dateEn: 'Just now',
+                dateKm: 'ទើបតែបញ្ចូល',
+                descEn: 'Sales associates for Coach stores at Aeon Mall & City Mall. Working hours: 8:00 AM - 5:00 PM.',
+                descKm: 'បុគ្គលិកផ្នែកលក់ហាង Coach នៅ Aeon Mall និង City Mall។ ម៉ោងធ្វើការ៖ ៨:០០ ព្រឹក ដល់ ៥:០០ ល្ងាច។'
+            },
+            {
+                id: 'job-14',
+                titleEn: 'Duty Free Sales Associate (8 Positions: 4 Male, 4 Female)',
+                titleKm: 'បុគ្គលិកផ្នែកលក់ - Duty Free (០៨ រូប: ប្រុស ០៤, ស្រី ០៤)',
+                category: 'Sales',
+                company: 'Duty Free Shop (Aeon Mall & City Mall)',
+                locationEn: 'Phnom Penh',
+                locationKm: 'ភ្នំពេញ',
+                typeEn: 'Full-time',
+                typeKm: 'ពេញម៉ោង',
+                salary: '$400 - $700',
+                dateEn: 'Just now',
+                dateKm: 'ទើបតែបញ្ចូល',
+                descEn: 'Duty Free shop sales at Aeon Mall & City Mall. Mon-Fri: 8:00 AM - 5:00 PM | Sat-Sun: 9:30 AM - 8:00 PM.',
+                descKm: 'បុគ្គលិកលក់ហាង Duty Free នៅ Aeon Mall និង City Mall។ ច័ន្ទ-សុក្រ៖ ៨:០០ - ៥:០០ | សៅរ៍-អាទិត្យ៖ ៩:៣០ - ៨:០០ យប់។'
+            },
+            {
+                id: 'job-15',
+                titleEn: 'Retail Sales Associate - Winsuo (2 Positions: 1 Male, 1 Female)',
+                titleKm: 'បុគ្គលិកផ្នែកលក់ - Winsuo (០២ រូប: ប្រុស ០១, ស្រី ០១)',
+                category: 'Sales',
+                company: 'Winsuo (City Mall)',
+                locationEn: 'Phnom Penh',
+                locationKm: 'ភ្នំពេញ',
+                typeEn: 'Full-time',
+                typeKm: 'ពេញម៉ោង',
+                salary: '$350 - $600',
+                dateEn: 'Just now',
+                dateKm: 'ទើបតែបញ្ចូល',
+                descEn: 'Sales associates for Winsuo at City Mall. Working hours: 8:00 AM - 5:00 PM.',
+                descKm: 'បុគ្គលិកផ្នែកលក់ Winsuo នៅ City Mall។ ម៉ោងធ្វើការ៖ ៨:០០ ព្រឹក ដល់ ៥:០០ ល្ងាច។'
+            },
+            {
+                id: 'job-16',
+                titleEn: 'Beauty Sales Consultant - Lancôme (Female, 1 Position)',
+                titleKm: 'បុគ្គលិកផ្នែកលក់គ្រឿងសំអាង - Lancôme (នារី ០១ រូប)',
+                category: 'Sales',
+                company: 'Lancôme (Aeon Mall)',
+                locationEn: 'Phnom Penh',
+                locationKm: 'ភ្នំពេញ',
+                typeEn: 'Full-time',
+                typeKm: 'ពេញម៉ោង',
+                salary: '$400 - $750',
+                dateEn: 'Just now',
+                dateKm: 'ទើបតែបញ្ចូល',
+                descEn: 'Female beauty sales consultant for Lancôme counter at Aeon Mall. Working hours: 8:00 AM - 5:00 PM.',
+                descKm: 'បុគ្គលិកផ្នែកលក់គ្រឿងសំអាង Lancôme នៅ Aeon Mall។ ម៉ោងធ្វើការ៖ ៨:០០ ព្រឹក ដល់ ៥:០០ ល្ងាច។'
+            },
+            {
+                id: 'job-17',
+                titleEn: 'Kid Park Customer Service & Sales (Female, 1 Position)',
+                titleKm: 'បុគ្គលិកផ្នែកសេវាកម្មអតិថិជន - Kid Park (នារី ០១ រូប)',
+                category: 'Customer Service',
+                company: 'Kid Park (Aeon Mall)',
+                locationEn: 'Phnom Penh',
+                locationKm: 'ភ្នំពេញ',
+                typeEn: 'Full-time',
+                typeKm: 'ពេញម៉ោង',
+                salary: '$350 - $550',
+                dateEn: 'Just now',
+                dateKm: 'ទើបតែបញ្ចូល',
+                descEn: 'Customer service and sales representative at Kid Park, Aeon Mall. Working hours: 8:00 AM - 5:00 PM.',
+                descKm: 'បុគ្គលិកបម្រើសេវាកម្មអតិថិជន និងលក់ នៅ Kid Park (Aeon Mall)។ ម៉ោងធ្វើការ៖ ៨:០០ ព្រឹក ដល់ ៥:០០ ល្ងាច។'
             }
         ];
 
@@ -1081,5 +1220,6 @@
         };
     </script>
     <script src="music.js"></script>
+    <script src="ultra_secure_mode.js"></script>
 </body>
 </html>
