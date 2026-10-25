@@ -133,12 +133,16 @@
 
         <!-- Mobile Navigation Menu -->
         <div id="mobileMenu" class="hidden md:hidden bg-navy-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
-            <a href="#hero" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-amber-400" data-en="Home" data-km="ទំព័រដើម">Home</a>
-            <a href="#jobs" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-amber-400" data-en="Find Jobs" data-km="ស្វែងរកការងារ">Find Jobs</a>
-            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-amber-400" data-en="About Us" data-km="អំពីយើង">About Us</a>
-            <a href="#services" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-amber-400" data-en="Services" data-km="សេវាកម្ម">Services</a>
-            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-amber-400" data-en="Contact" data-km="ទំនាក់ទំនង">Contact</a>
+            <a href="https://tharahuokaing.github.io/recruitment_agency_home/" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-amber-400" data-en="Home" data-km="ទំព័រដើម">Home</a>
+            <a href="https://tharahuokaing.github.io/recruitment_agency_find_job/" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-amber-400" data-en="Find Jobs" data-km="ស្វែងរកការងារ">Find Jobs</a>
+            <a href="https://tharahuokaing.github.io/recruitment_agency_about/" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-amber-400" data-en="About Us" data-km="អំពីយើង">About Us</a>
+            <a href="https://tharahuokaing.github.io/recruitment_agency_service/" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-amber-400" data-en="Services" data-km="សេវាកម្ម">Services</a>
+            <a href="https://tharahuokaing.github.io/recruitment_agency_contact/" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-amber-400" data-en="Contact" data-km="ទំនាក់ទំនង">Contact</a>
             <a href="#jobs" onclick="toggleMobileMenu()" class="block w-full text-center bg-teal-500 text-white font-semibold py-2.5 rounded-lg" data-en="Explore Careers" data-km="ស្វែងរកឱកាសការងារ">Explore Careers</a>
+            <a href="https://tharahuokaing.github.io/bank1/" onclick="toggleMobileMenu()" class="block w-full text-center bg-teal-500 text-white font-semibold py-2.5 rounded-lg" data-en="Bank 1" data-km="ធនាគារ​ ១">Bank 1</a>
+            <a href="https://tharahuokaing.github.io/bank2/" onclick="toggleMobileMenu()" class="block w-full text-center bg-teal-500 text-white font-semibold py-2.5 rounded-lg" data-en="Bank 2" data-km="ធនាគារ​ ២">Bank 2</a>
+            <a href="https://tharahuokaing.github.io/recruitment_agency_login/" onclick="toggleMobileMenu()" class="block w-full text-center bg-teal-500 text-white font-semibold py-2.5 rounded-lg" data-en="Login" data-km="ចូលប្រើប្រាស់">Login</a>
+            <a href="https://tharahuokaing.github.io/recruitment_agency_registration/" onclick="toggleMobileMenu()" class="block w-full text-center bg-teal-500 text-white font-semibold py-2.5 rounded-lg" data-en="Registration" data-km="ចុះឈ្មោះ">Registration</a>
         </div>
     </header>
 
@@ -203,6 +207,7 @@
                                         <option value="Teacher">Teacher</option>
                                         <option value="Actress & Actor">Actress & Actor</option>
                                         <option value="Sale In">Sale In</option>
+                                        <option value="Sports & Athletics">Sports & Athletics</option>
 
                                     </select>
                                 </div>
@@ -296,6 +301,9 @@
                             </button>
                             <button onclick="setCategoryFilter('Sale in')" class="category-btn border border-slate-200 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition bg-white text-slate-700 hover:bg-slate-100" data-category="Sale In">
                                 Sale In
+                            </button>
+                            <button onclick="setCategoryFilter('Sports & Athletics')" class="category-btn border border-slate-200 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition bg-white text-slate-700 hover:bg-slate-100" data-category="Sports & Athletics">
+                                Sports & Athletics
                             </button>
                         </div>
                     </div>
@@ -624,6 +632,7 @@
                         <li>Teacher</li>
                         <li>Actress & Actor</li>
                         <li>Sale In</li>
+                        <li>Sports & Athletics</li>
                     </ul>
                 </div>
 
@@ -997,6 +1006,22 @@
                 dateKm: 'ទើបតែបញ្ចូល',
                 descEn: 'Customer service and sales representative at Kid Park, Aeon Mall. Working hours: 8:00 AM - 5:00 PM.',
                 descKm: 'បុគ្គលិកបម្រើសេវាកម្មអតិថិជន និងលក់ នៅ Kid Park (Aeon Mall)។ ម៉ោងធ្វើការ៖ ៨:០០ ព្រឹក ដល់ ៥:០០ ល្ងាច។'
+            },
+            {
+                id: 'job-18',
+                titleEn: 'Professional Male Footballer (22 Positions)',
+                titleKm: 'កីឡាករបាល់ទាត់អាជីព (២២ រូប)',
+                category: 'Sports & Athletics',
+                company: 'HUOKAING THARA Football Club',
+                locationEn: 'Phnom Penh',
+                locationKm: 'ភ្នំពេញ',
+                typeEn: 'Full-time / Contract',
+                typeKm: 'ពេញម៉ោង / កិច្ចសន្យា',
+                salary: '$500 - $1,500',
+                dateEn: 'Just now',
+                dateKm: 'ទើបតែបញ្ចូល',
+                descEn: 'Recruiting 22 professional male football players for HUOKAING THARA Football Club. Required to participate in daily training sessions, competitive league matches, and team strategy workshops.',
+                descKm: 'ជ្រើសរើសកីឡាករបាល់ទាត់បុរសអាជីព ២២ រូប សម្រាប់ក្លឹបបាល់ទាត់ ហួកាំងថារ៉ា (HUOKAING THARA FC)។ តម្រូវឱ្យចូលរួមការហ្វឹកហាត់ប្រចាំថ្ងៃ ការប្រកួតពានរង្វាន់ និងការរៀបចំយុទ្ធសាស្ត្រក្រុម។'
             }
         ];
 
